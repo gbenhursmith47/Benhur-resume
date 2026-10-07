@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #e9edf2;
+    color: #02430e;
+    line-height: 1.55;
+}
+
+.resume {
+    width: 900px;
+    max-width: 94%;
+    margin: 35px auto;
+    background: #fff;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #034b09, #000000);
+    color: white;
+    padding: 34px 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.header-text {
+    flex: 1;
+}
+
+.header h1 {
+    font-size: 42px;
+    letter-spacing: 4px;
+    margin-bottom: 2px;
+}
+
+.role {
+    font-size: 17px;
+    opacity: 0.9;
+    margin-bottom: 18px;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    font-size: 13px;
+}
+
+.links {
+    margin-top: 10px;
+    display: flex;
+    gap: 18px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255,255,255,.6);
+}
+
+.links a:hover {
+    opacity: 0.75;
+}
+
+/* Photo */
+.photo-box {
+    width: 145px;
+    height: 175px;
+    flex-shrink: 0;
+    border: 4px solid white;
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+}
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+/* Content */
+.content {
+    padding: 30px 42px;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #082a03;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+}
+
+p {
+    font-size: 14px;
+}
+
+.item {
+    margin-bottom: 17px;
+}
+
+.item:last-child {
+    margin-bottom: 0;
+}
+
+.item-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 20px;
+}
+
+h3 {
+    font-size: 16px;
+    color: #202b35;
+}
+
+.item-title span {
+    font-size: 13px;
+    color: #687783;
+    white-space: nowrap;
+}
+
+.item p {
+    font-size: 13.5px;
+    color: #596873;
+}
+
+ul {
+    margin: 7px 0 0 20px;
+}
+
+li {
+    font-size: 13.5px;
+    margin-bottom: 4px;
+}
+
+/* Skills */
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+}
+
+.skills div {
+    background: #f3f7fa;
+    border-left: 4px solid #053809;
+    padding: 9px 12px;
+    font-size: 13.5px;
+}
+
+/* Certifications */
+.two-column {
+    columns: 2;
+    column-gap: 40px;
+}
+
+/* Bottom sections */
+.small-sections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.small-sections h2 {
+    font-size: 15px;
+}
+
+.small-sections ul {
+    margin-left: 18px;
+}
+
+/* Declaration */
+.date {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+    font-size: 13px;
+    color: #596873;
+}
+
+/* Footer */
+footer {
+    background: #f3f5f7;
+    text-align: center;
+    padding: 12px;
+    color: #71808b;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .resume {
+        max-width: 96%;
+        margin: 15px auto;
+    }
+
+    .header {
+        padding: 25px;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .contact,
+    .links {
+        justify-content: center;
+    }
+
+    .header h1 {
+        font-size: 34px;
+    }
+
+    .content {
+        padding: 25px;
+    }
+
+    .skills,
+    .small-sections {
+        grid-template-columns: 1fr;
+    }
+
+    .two-column {
+        columns: 1;
+    }
+
+    .item-title {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .date {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* Print / PDF */
+@media print {
+    @page {
+        size: A4;
+        margin: 10mm;
+    }
+
+    body {
+        background: white;
+    }
+
+    .resume {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .header {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    footer {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
